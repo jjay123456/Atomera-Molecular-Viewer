@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atomera - Research-grade structure-based drug discovery interface" />
+  <title>Atomera | Drug Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- Top Navigation Bar -->
+    <nav id="workflow-nav">
+      <div class="nav-brand">ATOMERA</div>
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-section="target">TARGET</button>
+        <button class="nav-tab locked" data-section="prep">PREP</button>
+        <button class="nav-tab locked" data-section="pocket">POCKET</button>
+        <button class="nav-tab locked" data-section="screen">SCREEN</button>
+        <button class="nav-tab locked" data-section="hits">HITS</button>
+        <button class="nav-tab locked" data-section="interactions">INTERACTIONS</button>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- Left Sidebar (Section Panel + Inspector stacked) -->
+      <div id="left-sidebar">
+        <!-- Active Section Panel -->
+        <div id="section-panel">
+          <!-- Section content injected here -->
+        </div>
+
+        <!-- Inspector Panel (Read-Only) -->
+        <div id="inspector-panel">
+          <div class="inspector-header">INSPECTOR</div>
+          <div id="inspector-content">
+            <div class="inspector-empty">No selection</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Structure Viewer (Always Visible) -->
+      <div id="viewer-container">
+        <div id="ngl-viewport"></div>
+        <div id="viewer-overlay" class="hidden">
+          <span class="overlay-text">Screening in progress...</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Status Bar -->
+    <footer id="status-bar">
+      <span class="status-field" id="status-target">TARGET: —</span>
+      <span class="status-field" id="status-pocket">POCKET: —</span>
+      <span class="status-field" id="status-job">JOB: idle</span>
+      <span class="status-field" id="status-scale">WORKERS: 0</span>
+      <span class="status-field status-message" id="status-message">Ready</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
