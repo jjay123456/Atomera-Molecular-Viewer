@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomera</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- App Container -->
+  <div id="app">
+    <!-- 1. Left Navigation Bar -->
+    <nav id="left-nav">
+      <div class="nav-item" data-panel="FILE">FILE</div>
+      <div class="nav-item" data-panel="VIEW">VIEW</div>
+      <div class="nav-item" data-panel="ANALYSIS">ANALYSIS</div>
+      <div class="nav-item" data-panel="MEASURE">MEASURE</div>
+      <div class="nav-item" data-panel="SETTINGS">SETTINGS</div>
+    </nav>
+
+    <!-- 2. Main Content Area -->
+    <main id="main-area">
+      <!-- Header / Toolbar -->
+      <header id="toolbar">
+        <div class="toolbar-left"></div> <!-- Blank as requested -->
+        <div class="toolbar-right">
+          <button id="btn-reset">RESET</button>
+          <button id="btn-spin">SPIN</button>
+          <button id="btn-screenshot">SCREENSHOT</button>
+        </div>
+      </header>
+
+      <!-- 3D Viewer Canvas -->
+      <div id="viewer-container"></div>
+    </main>
+
+    <!-- 3. Right Sidebar (Panel Container) -->
+    <aside id="right-sidebar">
+      <!-- Panels will be injected here by panel-system.js -->
+    </aside>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>
